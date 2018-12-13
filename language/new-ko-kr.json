@@ -1,0 +1,20 @@
+{
+    "common" : {
+      "delete" : "삭제",
+      "filter" : "필터",
+      "interwiki" : "위키 내부 (?)",
+      "list" : "목록",
+      "user" : "사용자"
+    },
+    "error" : {
+      "inter_error" : "내부 오류!",
+      "detail" : "요청한 작업을 수행하는 도중 내부 오류가 발생했습니다. 아래에서 자세한 사항을 확인하세요.",
+    },
+    "oauth" : {
+        "sign_in_facebook" : "Facebook으로 로그인",
+        "sign_in_naver" : "네이버 아이디로 로그인",
+        "settings_not_found" : "관리자가 이 기능을 사용하는데 대한 정보를 제공하지 않았습니다.",
+        "disabled" : "관리자가 이 기능을 비활성화시켰습니다."
+    }
+   }
+  

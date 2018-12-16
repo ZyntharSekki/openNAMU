@@ -1,4 +1,5 @@
 {
+  "_format" : "opennamu language data: kr, format 2",
   "common" : {
     "add" : "추가",
     "delete" : "삭제",
@@ -89,5 +90,5 @@
     "other" : "기타",
     "template" : "틀",
     "user" : "사용자"
-    }
-   }
+  }
+}

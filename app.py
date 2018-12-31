@@ -1324,12 +1324,12 @@ def oauth_settings():
                                 oauth_data['client_{}'.format(load_target)]
                             )
     
-    body_content += '<button id="save" type="submit">' + load_lang('save') + '</button></form>'
+    body_content += '<button id="save" type="submit">' + load_langs('common', 'save') + '</button></form>'
     
     return easy_minify(flask.render_template(skin_check(),
-        imp = [load_lang('oauth_settings'), wiki_set(), custom(), other2([0, 0])],
+        imp = [load_langs('manager', 'oauth_settings'), wiki_set(), custom(), other2([0, 0])],
         data = body_content,
-        menu = [['other', load_lang('other')]]
+        menu = [['other', load_langs('common', 'etc')]]
     ))
 
 @app.route('/adsense_settings', methods=['GET', 'POST'])
@@ -2222,38 +2222,38 @@ def manager(num = 1):
         return easy_minify(flask.render_template(skin_check(), 
             imp = [load_lang('admin') + ' ' + load_lang('tool'), wiki_set(), custom(), other2([0, 0])],
             data =  '''
-                    <h2>''' + load_lang('admin') + '''</h2>
+                    <h2>''' + load_langs('acl_list', 'admin') + '''</h2>
                     <ul>
-                        <li><a href="/manager/2">''' + load_lang('document') + ''' acl</a></li>
-                        <li><a href="/manager/3">''' + load_lang('user') + ' ' + load_lang('check') + '''</a></li>
-                        <li><a href="/manager/4">''' + load_lang('user') + ' ' + load_lang('ban') + '''</a></li>
-                        <li><a href="/manager/5">''' + load_lang('subscriber') + ' ' + load_lang('authority') + '''</a></li>
-                        <li><a href="/edit_filter">''' + load_lang('edit') + ' ' + load_lang('filter') + '''</a></li>
+                        <li><a href="/manager/2">''' + load_langs('manager', 'document_acl') + '''</a></li>
+                        <li><a href="/manager/3">''' + load_langs('manager', 'user_check') + '''</a></li>
+                        <li><a href="/manager/4">''' + load_langs('manager', 'user_block') + '''</a></li>
+                        <li><a href="/manager/5">''' + load_langs('manager', 'user_auth') + '''</a></li>
+                        <li><a href="/edit_filter">''' + load_langs('manager', 'edit_filter') + '''</a></li>
                     </ul>
                     <br>
-                    <h2>''' + load_lang('owner') + '''</h2>
+                    <h2>''' + load_langs('acl_list', 'owner') + '''</h2>
                     <ul>
                         <li><a href="/manager/8">''' + load_lang('admin_group') + ' ' + load_lang('create') + '''</a></li>
-                        <li><a href="/setting">''' + load_lang('setting') + ' ' + load_lang('edit') + '''</a></li>
+                        <li><a href="/setting">''' + load_langs('manager', 'wiki_settings') + '''</a></li>
                     </ul>
-                    <h3>''' + load_lang('filter') + '''</h3>
+                    <h3>''' + load_langs('common', 'filter') + '''</h3>
                     <ul>
-                        <li><a href="/inter_wiki">''' + load_lang('interwiki') + '''</a></li>
-                        <li><a href="/html_filter">html ''' + load_lang('filter') + '''</a></li>
-                        <li><a href="/email_filter">email ''' + load_lang('filter') + '''</a></li>
-                        <li><a href="/name_filter">''' + load_lang('id') + ' ' + load_lang('filter') + '''</a></li>
+                        <li><a href="/inter_wiki">''' + load_langs('manager', 'filter_inter_wiki') + '''</a></li>
+                        <li><a href="/html_filter">''' + load_langs('manager', 'filter_html') + '''</a></li>
+                        <li><a href="/email_filter">''' + load_langs('manager', 'filter_email') + '''</a></li>
+                        <li><a href="/name_filter">''' + load_langs('manager', 'filter_id') + '''</a></li>
                     </ul>
                     <br>
-                    <h2>''' + load_lang('server') + '''</h2>
+                    <h2>''' + load_langs('common', 'server') + '''</h2>
                     <ul>
-                        <li><a href="/indexing">''' + load_lang('indexing') + ' (' + load_lang('create') + ' or ' + load_lang('delete') + ''')</a></li>
-                        <li><a href="/restart">''' + load_lang('server') + ' ' + load_lang('restart') + '''</a></li>
-                        <li><a href="/update">''' + load_lang('update') + '''</a></li>
-                        <li><a href="/oauth_settings">''' + load_lang('oauth_settings') + '''</a></li>
-                        <li><a href="/adsense_settings">''' + load_lang('adsense') + ' ' + load_lang('setting') + '''</a></li>
+                        <li><a href="/indexing">''' + load_langs('manager', 'indexing') + '''</a></li>
+                        <li><a href="/restart">''' + load_langs('manager', 'server_restart') + '''</a></li>
+                        <li><a href="/update">''' + load_langs('manager', 'opennamu_update') + '''</a></li>
+                        <li><a href="/oauth_settings">''' + load_langs('manager', 'oauth_settings') + '''</a></li>
+                        <li><a href="/adsense_settings">''' + load_langs('manager', 'adsense_settings') + '''</a></li>
                     </ul>
                     ''',
-            menu = [['other', load_lang('other')]]
+            menu = [['other', load_langs('common', 'etc')]]
         ))
     elif not num - 1 > len(title_list):
         if flask.request.method == 'POST':

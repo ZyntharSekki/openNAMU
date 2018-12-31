@@ -9,11 +9,13 @@
     "list" : "목록",
     "name" : "이름",
     "user" : "사용자",
-    "regex" : "정규표현식"
+    "regex" : "정규표현식",
+    "server" : "서버",
+    "save" : "저장"
   },
   "acl_list" : {
-    "admin" : "관리자",
     "owner" : "소유자",
+    "admin" : "관리자",
     "user" : "사용자"
   },
   "adsense" : {
@@ -66,7 +68,7 @@
     "filter_inter_wiki" : "인터위키",
     "filter_html" : "HTML 필터",
     "filter_email" : "이메일 필터",
-    "filer_id" : "아이디 필터",
+    "filter_id" : "아이디 필터",
     "indexing" : "인덱싱 생성, 삭제",
     "oauth_settings" : "OAuth 설정",
     "opennamu_update" : "오픈나무 업데이트",

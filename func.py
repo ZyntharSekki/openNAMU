@@ -278,6 +278,8 @@ def load_langs(index, data, num = 2):
         if index in lang:
             if data in lang[index]:
                 return lang[index][data]
+            else:
+                return data + ' (missing)'
         else:
             return data + ' (missing)'
     else:
@@ -288,14 +290,17 @@ def load_langs(index, data, num = 2):
                 json_data = open(os.path.join('languages', rep_data[0][0] + '.json'), 'rt', encoding='utf-8').read()
                 lang = json.loads(json_data)
             except:
-                return load_lang(index, data, 1)
+                return load_langs(index, data, 1)
 
-            if data in lang:
-                return lang[data]
+            if index in lang:
+                if data in lang[index]:
+                    return lang[index][data]
+                else:
+                    return data + ' (missing)'
             else:
-                return load_lang(index, data, 1)
+                return load_langs(index, data, 1)
         else:
-            return load_lang(index, data, 1)
+            return load_langs(index, data, 1)
 
 def load_oauth(provider):
     oauth = json.loads(open('oauthsettings.json', encoding='utf-8').read())
